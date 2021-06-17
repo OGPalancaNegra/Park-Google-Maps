@@ -16,7 +16,6 @@ import android.view.ViewGroup;
 
 import com.example.nottinghamrestaurants.adapter.OnRestaurantClickListener;
 import com.example.nottinghamrestaurants.adapter.RestaurantRecycler;
-import com.example.nottinghamrestaurants.data.Repository;
 import com.example.nottinghamrestaurants.model.NottinghamRestaurants;
 import com.example.nottinghamrestaurants.model.RestaurantViewModel;
 

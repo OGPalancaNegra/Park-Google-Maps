@@ -6,10 +6,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 
 import com.example.nottinghamrestaurants.data.Repository;
-import com.example.nottinghamrestaurants.model.ExampleList;
 import com.example.nottinghamrestaurants.model.NottinghamRestaurants;
 import com.example.nottinghamrestaurants.model.RestaurantViewModel;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -22,10 +20,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -118,7 +112,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 mMap.addMarker(new MarkerOptions().position(restaurantsLatLon).title(nottinghamRestaurants.getBusinessType()));
                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(restaurantsLatLon, 10));
             }
-            restaurantViewModel.setSelectedParks(restaurantsList);
+            restaurantViewModel.setSelectedRestaurants(restaurantsList);
         });
     }
 }

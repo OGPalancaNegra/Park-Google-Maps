@@ -20,9 +20,10 @@ public class RestaurantViewModel extends ViewModel {
         return selectedRestaurant;
     }
 
-    public void setSelectedParks(List<NottinghamRestaurants> restaurants) {
+    public void setSelectedRestaurants(List<NottinghamRestaurants> restaurants) {
         selectedRestaurants.setValue(restaurants);
     }
+
     public LiveData<List<NottinghamRestaurants>> getRestaurants() {
         return selectedRestaurants;
     }

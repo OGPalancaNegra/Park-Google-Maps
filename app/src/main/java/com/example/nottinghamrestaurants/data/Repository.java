@@ -53,6 +53,10 @@ public class Repository {
 
                             restaurants.setPostCode(restaurantObjects.getString("PostCode"));
 
+                            restaurants.setLocalAuthorityName(restaurantObjects.getString("LocalAuthorityName"));
+
+                            restaurants.setRatingValue(Integer.valueOf(restaurantObjects.getString("RatingValue")));
+
                            // park.code(jsonObject.getString("parkCode"));
                             //park.setStates(jsonObject.getString("states"));
 
