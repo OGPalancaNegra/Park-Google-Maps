@@ -12,5 +12,5 @@
         android:id="@+id/location_nav_button"
         android:icon="@drawable/business_icon"
         app:showAsAction="ifRoom"
-        android:title="@string/parks" />
+        android:title="@string/restaurants" />
 </menu>

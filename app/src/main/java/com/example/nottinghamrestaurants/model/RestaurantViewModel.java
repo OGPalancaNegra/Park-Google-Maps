@@ -11,6 +11,8 @@ public class RestaurantViewModel extends ViewModel {
 
     private final MutableLiveData<List<NottinghamRestaurants>> selectedRestaurants = new MutableLiveData<>();
 
+    private final MutableLiveData<String> code = new MutableLiveData<>();
+
     public void setSelectedRestaurant(NottinghamRestaurants nottinghamRestaurants){
         selectedRestaurant.setValue(nottinghamRestaurants);
 
@@ -28,5 +30,9 @@ public class RestaurantViewModel extends ViewModel {
         return selectedRestaurants;
     }
 
+    public LiveData<String> getCode() { return code; }
+    public void selectCode(String c) {
+        code.setValue(c);
+    }
 
 }

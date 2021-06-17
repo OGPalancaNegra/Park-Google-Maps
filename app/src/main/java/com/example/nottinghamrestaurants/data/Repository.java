@@ -6,6 +6,7 @@ import com.android.volley.Request;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.example.nottinghamrestaurants.controller.AppController;
 import com.example.nottinghamrestaurants.model.NottinghamRestaurants;
+import com.example.nottinghamrestaurants.util.Util;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,8 +16,8 @@ import java.util.List;
 
 public class Repository {
     static List<NottinghamRestaurants> restaurantList = new ArrayList<>();
-    public static void getRestaurants(final AsyncResponse callback) {
-        String url = "https://wyre-data.p.rapidapi.com/restaurants/nottingham/?rapidapi-key=228035bb51msh1fa0747c288bc78p107940jsndc744793e98a";
+    public static void getRestaurants(final AsyncResponse callback, String cityName) {
+        String url = Util.getParksUrl(cityName);
         Log.d("URL", "getRestaurants: " + url);
         JsonArrayRequest jsonArrayRequest =
                 new JsonArrayRequest(Request.Method.GET, url, null, response -> {

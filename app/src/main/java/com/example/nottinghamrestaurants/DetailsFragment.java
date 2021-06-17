@@ -30,12 +30,22 @@ public class DetailsFragment extends Fragment {
     public DetailsFragment() {
         // Required empty public constructor
     }
+    public static DetailsFragment newInstance() {
+        DetailsFragment fragment = new DetailsFragment();
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        restaurantViewModel = new ViewModelProvider((requireActivity())).get(RestaurantViewModel.class);
+        restaurantViewModel = new ViewModelProvider(requireActivity()).get(RestaurantViewModel.class);
 
         TextView businessName = view.findViewById(R.id.details_business_name_text_view);
         TextView businessType = view.findViewById(R.id.details_business_type_text_view);
@@ -57,18 +67,6 @@ public class DetailsFragment extends Fragment {
     });
     }
 
-    public static DetailsFragment newInstance() {
-        DetailsFragment fragment = new DetailsFragment();
-        Bundle args = new Bundle();
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
